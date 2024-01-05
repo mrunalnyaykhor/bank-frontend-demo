@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<body class="div1" >
+    <div class="div-2">
+    <div class="banner">
+
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h2><input type="button" class="button button5" value="Update Bank"></h2>
+                <form [formGroup]="bankForm" class="was-validated" (ngSubmit)="updateBank()">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>BankId:</label>
+                                <input type="text" class="form-control" formControlName="bankId" name="bankId" value={{bankId}} disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>bankName:</label>
+                                <input type="text" class="form-control" formControlName="bankName" name="bankName" required>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Branch Name:</label>
+                                <input type="text" class="form-control" formControlName="branchName"name="branchName" required>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>ifscCode:</label>
+                                <input type="text" class="form-control" formControlName="ifscCode" name="ifscCode" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>address:</label>
+                                <input type="text" class="form-control" formControlName="address" name="address"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   <br/>
+                    <button type="submit" class="btn btn-success" [disabled]="!bankForm.valid">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-warning" id="exit" (click)="onClickExit()">Exit</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

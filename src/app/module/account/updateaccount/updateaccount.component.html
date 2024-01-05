@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<body class="div1" >
+    <div class="div-2">
+    <div class="banner">
+
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h2><input type="button" class="button button5" value="Update Account"></h2>
+                <form [formGroup]="accountForm" class="was-validated" (ngSubmit)="updateAccount()">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>AccountId:</label>
+                                <input type="text" class="form-control" formControlName="accountId" name="accountId" value={{accountId}} disabled>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Amount:</label>
+                                <input type="text" class="form-control" formControlName="amount"  name="amount" required >
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Account Type:</label>
+                                <input type="text" class="form-control" formControlName="accountType"name="accountType" required>
+
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Account Type:</label>
+                                <input type="text" class="form-control" formControlName="accountType" name="accountType" required 
+                                    oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>AccountNumber:</label>
+                                <input type="text" class="form-control" [formControl]="accountNumberControl" placeholder="skip" name="accountNumber" required >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Blocked:</label>
+                                <input type="text" class="form-control" formControlName="blocked" name="blocked"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>BankId:</label>
+                                <input type="text" class="form-control" formControlName="bankId" name="bankId"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>CustomerId:</label>
+                                <input type="text" class="form-control" formControlName="customerId" name="customerId"
+                                    required>
+                            </div>
+                        </div>
+                    </div><br/>
+                    <button type="submit" class="btn btn-success" [disabled]="!accountForm.valid">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-warning" id="exit" (click)="onClickExit()">Exit</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

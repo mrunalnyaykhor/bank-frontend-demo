@@ -1,0 +1,38 @@
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50;
+    margin: 10px 2px;
+    cursor: pointer;
+  }
+  .button1 {
+      background-color: #04AA6D; /* Green */
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 50;
+      margin: 5px 2px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+  
+  /*  */
+  .button5 {background-color: #400520;} 
+  .button6 {background-color: #32d626;} 
+  
+  
+      
+      .div-2 {
+          background-color: #ABBAEA;
+      }
+      
+    

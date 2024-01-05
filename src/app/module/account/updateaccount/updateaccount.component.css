@@ -1,0 +1,21 @@
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50;
+    margin: 6px 20px;
+    cursor: pointer;
+  }
+  .div1{
+    background-color: cadetblue;
+  }
+ 
+  
+  /*  */
+  .button5 {background-color: #400520;} 
+  .button6 {background-color: #32d626;} 
+  

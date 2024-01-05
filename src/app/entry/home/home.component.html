@@ -1,0 +1,74 @@
+
+  <div class="div-2">
+    <h1 class="centered-title">
+        Welcome to MHBank
+    </h1>
+  <style>
+    .nav-container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10%; /* Adds 1cm space on the left and right of the container */
+    }
+
+    .nav-list {
+        padding: 0;
+        list-style-type: none;
+        margin: 10px; /* Remove default margin from the list */
+    }
+
+    .nav-group {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<nav class="nav-container">
+    <ul class="nav-list nav-group">
+        <!-- Left aligned items -->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/banklist" style="text-decoration: underline; color: rgba(237, 241, 242, 0.92);"><p class="heading">Bankdetails</p></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/addbank" style="text-decoration: underline; color: brown;"><p class="heading">Addbank</p></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/transfermoney" style="text-decoration: underline; color: rgba(245, 238, 238, 0.877);"><p class="heading">Transfermoney</p></a>
+        </li>
+      
+    </ul>
+    
+    <ul class="nav-list nav-group">
+        <!-- Center aligned items -->
+        
+                <th scope="col"></th>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/customerlist" style="text-decoration: underline; color: rgb(228, 216, 216);"><p class="heading">Customerdetails</p></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/addcustomer" style="text-decoration: underline; color: brown;"><p class="heading">Addcustomer</p></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/withdrawal" style="text-decoration: underline; color: rgba(238, 231, 231, 0.877);"><p class="heading">Withdrawalmoney</p></a>
+        </li>
+        
+    </ul>
+
+    <ul class="nav-list nav-group">
+        <!-- Right aligned items -->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/accountlist" style="text-decoration: underline; color: rgb(253, 249, 249);"><p class="heading">Accountdetails</p></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/addaccount" style="text-decoration: underline; color: brown;"><p class="heading">Addaccount</p></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/transactionlist" style="text-decoration: underline; color:rgb(228, 219, 219);"><p class="heading">Transactiondetails</p></a>
+        </li> 
+       
+    </ul>
+</nav>
+
+</div>

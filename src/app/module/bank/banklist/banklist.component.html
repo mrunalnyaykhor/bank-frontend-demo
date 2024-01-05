@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+ 
+
+
+<body  class="div-2" >
+  <style>
+    table, th, td {
+      border:2px solid wheat;
+    }
+    </style>
+     
+        <div class="container" >
+   
+
+    <table style="width:100%" >
+      <thead>
+        <tr style="background-color:rgb(23, 192, 222);">
+          <th>Bank_ID</th>
+          <th>BANK_NAME</th>
+          <th>IFSC_CODE</th>
+          <th>BRANCH_NAME</th>
+          <th>ADDRESS</th>
+           <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody style="flood-color: rgb(11, 1, 1);">
+        <tr  class="thead-dark"*ngFor="let b of banks;" style="color:black">
+          <td>{{b.bankId}}</td>
+          <td>{{b.bankName}}</td>
+          <td>{{b.ifscCode}}</td>
+          <td>{{b.branchName}}</td>
+          <td>{{b.address}}</td>
+          <td>
+            <input type="button" class="btn btn-outline-success"(click)="updateBank(b.bankId)"value="update">&nbsp;&nbsp;
+          <input type="button" class="btn btn-outline-danger"(click)="deleteBank($event, b.bankId)"value="delete"></td>
+        </tr>
+      </tbody>
+     
+    </table>
+
+  </div>
+
+</body>
+
+<!-- <button type="submit" class="btn btn-warning"id="exit"(click)="onClickExit()">Exit</button> -->
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<body >
+
+  
+
+<div class="container">
+  <h2><input type="button" class="button button5" value="Update Account"></h2><br/>
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+
+  <div>
+    User Name : <input type="text" name="username" [(ngModel)]="username">
+
+    Password  : <input type="password" name="password" [(ngModel)]="password"><br/>
+
+    <!-- User Name : {{username}} -->
+   <br/>
+    <button (click)=handleLogin() class="btn btn-success">Login</button>
+  </div>
+</div>
+
+
+</body>
+</html>
+

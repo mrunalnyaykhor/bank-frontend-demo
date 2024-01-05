@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+ 
+
+<!-- <head >
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> -->
+
+<body  >
+  <style>
+    table, th, td {
+      border:2px solid wheat;
+    }
+    </style>
+  <div class="container" >
+
+    <table style="width:100%" >
+      <thead>
+        <tr style="background-color:rgb(23, 192, 222);">
+           <th>AccountId</th>
+          <th>Amount</th>
+          <th>Account Number</th>
+          <th>Accout Type</th>
+          <th>Blocked</th>
+          <th>CustomerId</th>
+          <th>BankId</th>
+           <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody style="flood-color: rgb(11, 1, 1);">
+        <tr  class="thead-dark"*ngFor="let account of accounts;" style="color:black">
+          <td>{{account.accountId}}</td>
+          <td>{{account.amount}}</td>
+          <td>{{account.accountNumber}}</td>
+          <td>{{account.accountType}}</td>
+          <td>{{account.blocked}}</td>
+          <td>{{account.customerId}}</td>
+          <td>{{account.bankId}}</td>
+          <td><input type="button" class="btn btn-outline-success"(click)="updateAccount(account.accountId)"value="update">&nbsp;&nbsp;
+  
+          <input type="button" class="btn btn-outline-danger"(click)="deleteAccount($event,account.accountId)"value="delete"></td>
+        </tr>
+      </tbody>
+     
+    </table>
+ 
+  </div>
+
+</body>
+<!-- <button type="submit" class="btn btn-warning"id="exit"(click)="onClickExit()">Exit</button> -->
+</html>

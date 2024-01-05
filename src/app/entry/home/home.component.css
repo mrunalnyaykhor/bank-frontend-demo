@@ -1,0 +1,29 @@
+.centered-title {
+    text-align: center;
+    color: white;
+    background-color:  #2f0418;
+    margin-top: 0;     /* Optional: remove the top margin */
+    margin-bottom: 0;  /* Optional: remove the bottom margin */
+    padding: 5px;     /* Optional: add some padding */
+}
+
+.div-2 {
+    background-color: #ABBAEA;
+}
+.a{
+    padding: 50px;
+
+}
+.heading{
+    font-size: 30px;
+    font-weight: 700;
+}
+.table{
+    margin-right: 5px;
+    margin-left: 120px;
+}
+
+.div-2 {
+    background-color: #2f0418;
+    height: 510px;
+}

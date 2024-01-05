@@ -1,0 +1,12 @@
+.statement-cell {
+    text-align: center;
+    font-size: 25px; /* Increase font size as desired */
+    /* You can add more styles here if needed */
+  }
+  .div1{
+    background-color: rgb(211, 227, 231);
+    height: 550px;
+  }
+  body {
+    background-color: cadetblue;
+}

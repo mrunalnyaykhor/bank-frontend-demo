@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+ <body  class="div1">
+ 
+  <style>
+    table, th, td {
+      border:2px solid wheat;
+    }
+    </style>
+  <div class="container" >
+    
+    
+      <table   style="width:50%">
+        
+        <tr style="background-color: rgb(182, 71, 197);">
+          <td class="statement-cell">
+            <strong>View statement</strong>
+          </td>
+        </tr>
+     
+        <!DOCTYPE html>
+        <html lang="en">
+        <body >
+              <div class="row">
+                    <div class="col-4">
+        
+                    </div>
+                    <div class="col-4">
+                        
+                        <form [formGroup]="transactionForm" class="was-validated" (ngSubmit)="getStatement()">
+                            <div class="row">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label>Account Number:</label>
+                                    <input type="text" class="form-control" formControlName="accountNumber" placeholder="Enter Account Number" name="accountNumber"required>
+                                    <div *ngIf="transactionForm.get('accountNumber').invalid && transactionForm.get('accountNumber').touched">
+                                      <div *ngIf="transactionForm.get('accountNumber').errors?.required">Account Number is required.</div>
+                                      <div *ngIf="transactionForm.get('accountNumber').errors?.invalidInteger">Only integer values allowed.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label>Days:</label>
+                                    <input type="text" class="form-control" formControlName="days" placeholder="Enter Days"name="days" required>
+                                    <div *ngIf="transactionForm.get('days').invalid && transactionForm.get('days').touched">
+                                      <div *ngIf="transactionForm.get('days').errors?.required">Bank Name is required.</div>
+                                      <div *ngIf="transactionForm.get('days').errors?.invalidInteger">Only Integer  values allowed.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                                
+                    <!-- <br/> -->
+                    <button type="submit" class="btn btn-success"[disabled]="!transactionForm.valid">Submit</button>&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-warning"id="exit"(click)="onClickExit()">Exit</button>
+                    </form>
+            </div>
+           
+        </div>
+       
+        </body>
+        </html>
+        
+  
+      </table>
+    <body class="div1">
+    <table style="width:100%" >
+      <thead>
+        <tr style="background-color:rgb(203, 119, 216);">
+           <!-- <th>TransactionId</th> -->
+          <th>AccountNumberFrom</th>
+          <th>AccoutNumberTo</th>
+          <th>Amount</th>
+          <th>TransactionDate</th>
+          <th>ifsc Code</th>
+          <th>Name</th>
+          <th>Description</th>
+           
+        </tr>
+      </thead>
+      <tbody style="flood-color: rgb(11, 1, 1);">
+        <tr  class="thead-dark"*ngFor="let transaction of transactions;" style="color:black">
+        <!-- <td>{{transaction.transactionId}}</td> -->
+          <td>{{transaction.accountNumberFrom}}</td>
+          <td>{{transaction.accountNumberTo}}</td>
+          <td>{{transaction.amount}}</td>
+          <td>{{transaction.transactionDate}}</td>
+          <td>{{transaction.ifscCode}}</td>
+          <td>{{transaction.name}}</td>
+          <td>{{transaction.description}}</td>
+          <!-- <td><input type="button" class="btn btn-outline-success"(click)="updateAccount(account.accountId)"value="update">&nbsp;&nbsp;
+  
+          <input type="button" class="btn btn-outline-danger"(click)="deleteAccount(account)"value="delete"></td> -->
+        </tr>
+      </tbody>
+     
+    </table>
+  </body>
+  </div>
+
+</body>
+
+ <!-- <button type="submit" class="btn btn-warning"id="exit"(click)="onClickExit()">Exit</button>  -->
+ </html>  
+   
